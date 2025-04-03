@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="hero">
+    <div class="hero_section">
+        <span>🌱</span>            
+        <h3>The nature candle</h3>
+        <p>All handmade with natural soy wax, Candleaf is a companion for all your pleasure moments </p>
+        <button>Discovery our collection</button>
+    </div>
+</div>
+
+<div class="container">
+    <menu class="products">
+        <h3>Products</h3>
+        <p>Order it for yourself or for your loved ones</p>
+        <div class="product_card-wrapper">
+            {% if products %}
+                {% for product in products %}
+                    <div class="product_card">
+                        <div class="product_card-header">
+                            <a href="/products/{{ product._id }}">
+                                {% if product.image %}
+                                    <img src="{{ product.image }}" alt="product image">
+                                {% else %}
+                                    <img src="/static/assets/default.webp" alt="product image">
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="product_card-body">
+                            <p class="product_name">{{ product.name }}</p>
+                            <h4 class="product_price">{{ product.price }} so'm</h4>
+                            <div class="button_group">
+                                <a href="/products/{{ product._id }}" class="buy_button">Buy</a>
+                                <a type="button" class="save_button">Save</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h2>No products yet :(</h2>
+            {% endif %}
+        </div>
+    </menu>
+</div>
+{% endblock content %}

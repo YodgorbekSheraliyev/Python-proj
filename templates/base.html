@@ -1,0 +1,21 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+    {% include 'partials/head.html' %}
+    
+<body>
+    {% if hide_nav_footer %}
+    {% else %}
+        {% include 'partials/nav.html' %}
+    {% endif %}
+    
+    {% block content %}
+    {% endblock content %}
+
+    {% if hide_nav_footer %}
+    {% else %}
+        {% include 'partials/footer.html' %}
+    {% endif %}
+
+</body>
+</html>

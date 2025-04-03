@@ -1,0 +1,23 @@
+"""
+./   
+./auth/login  GET
+./auth/login  POST
+
+./auth/register GET
+./auth/register POST
+
+./auth/logout   GET
+
+./products GET
+./products/:id GET
+./products/buy:id GET (registered users only)
+./products/delete:id GET (registered users only)
+
+./products/add POST (admin only)
+
+./cart  GET (registered only)
+./cart/delete:productId  POST (registered only)
+./cart/checkout POST (registered only)
+
+
+"""

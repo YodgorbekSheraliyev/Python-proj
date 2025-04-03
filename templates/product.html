@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="product_page-wrapper">
+        <section class="product_left">
+            <img src="/static/{{product.images[0]}}" alt="Product Image" class="slide">
+        </section>
+        <section class="product_right">
+            <h3 class="product_title">{{product.name}}</h3>
+            <p class="product_description">
+                {{product.description}}
+            </p>
+            <p class="product_right-price"> Price: <span >{{product.price}} so'm</span></p>
+            
+            <form action="/products/buy/{{product._id}}" method="post" class="product_buy-form">
+                <label for="quantity">
+                    Quantity
+                    <input type="number"  name="amount" value="1" id="quantity">
+                </label>
+                <br>
+                <button type="submit">Add to cart</button>
+            </form>
+        </section>
+    </div>
+</div>
+{% endblock content%}

@@ -1,0 +1,98 @@
+[{
+  "_id": {
+    "$oid": "67d9420568c5ed45ac9f854f"
+  },
+  "name": "Spiced Mint",
+  "description": "Some description",
+  "price": 50000,
+  "amount": 20,
+  "images": [
+    "/assets/image.png",
+    "/assets/image 1.png"
+  ],
+  "createdAt": {
+    "$date": "2025-03-18T09:51:01.283Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-18T09:51:01.283Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d9424e68c5ed45ac9f8551"
+  },
+  "name": "Spiced Mint",
+  "description": "Wax: Top grade Soy wax that delivers a smoke less, consistent burn. Fragrance: Premium quality ingredients with natural essential oils. Burning Time: 70-75 hours Dimension: 10cm x 5cm Weight: 400g",
+  "price": 45000,
+  "amount": 30,
+  "images": [
+    "/assets/image.png"
+  ],
+  "createdAt": {
+    "$date": "2025-03-18T09:52:14.726Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-18T09:52:14.726Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d9425468c5ed45ac9f8556"
+  },
+  "name": "Spiced Mint",
+  "description": "Wax: Top grade Soy wax that delivers a smoke less, consistent burn. Fragrance: Premium quality ingredients with natural essential oils. Burning Time: 70-75 hours Dimension: 10cm x 5cm Weight: 400g",
+  "price": 45000,
+  "amount": 30,
+  "images": [
+    "/assets/image.png"
+  ],
+  "createdAt": {
+    "$date": "2025-03-18T09:52:20.061Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-18T09:52:20.061Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d6ea6c8a7277def220612b"
+  },
+  "name": "Spiced Mint Candleaf®",
+  "description": "Wax: Top grade Soy wax that delivers a smoke less, consistent burn. Fragrance: Premium quality ingredients with natural essential oils. Burning Time: 70-75 hours Dimension: 10cm x 5cm Weight: 400g",
+  "price": 50000,
+  "amount": 20,
+  "images": [
+    "/assets/image.png",
+    "/assets/image 1.png"
+  ],
+  "createdAt": {
+    "$date": "2025-03-16T15:12:44.324Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-16T15:12:44.324Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67d7fc85c0a95671b921dbe2"
+  },
+  "name": "Candleaf®",
+  "description": "Wax: Top grade Soy wax that delivers a smoke less, consistent burn\n            Fragrance: Premium quality ingredients with natural essential oils\n            Burning Time: 70-75 hours Dimension: 10cm x 5cm Weight: 400g",
+  "price": 50000,
+  "amount": 20,
+  "images": [
+    "/assets/image.png",
+    "/assets/image 1.png"
+  ],
+  "createdAt": {
+    "$date": "2025-02-16T15:12:44.324Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-16T15:12:44.324Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,33 @@
+<nav class="nav">
+    <div class="container">
+        <div class="menu_wrapper">
+            <p id="menuBtn">☰</p>
+            <a href="/">
+            <img src="/static/assets/icon.svg" alt="CandLeaf Logo" >
+            <span>Candleaf</span>
+            </a>
+        </div>
+        <ul class="nav_list">
+            <li><a href="/products" class="nav_list_item">Discovery</a></li>
+            <li><a href="#" class="nav_list_item">About</a></li>
+            <li><a href="/contact" class="nav_list_item">Contact us</a></li>
+        </ul>
+        <div class="menu_last">
+            <a href="/cart" >
+                Cart
+            </a>
+            
+            {% if user %}
+            <a href="/auth/logout">
+                Logout
+            </a>
+
+            {% else %}
+            <a href="/auth/login" >
+                Login
+            </a>
+            {% endif %}
+        
+        </div>
+    </div>            
+</nav>
