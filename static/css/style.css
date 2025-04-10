@@ -47,7 +47,9 @@ button:active {
   top: 0;
   z-index: 10;
   opacity: 1;
+  background-color: var(--background-color);
 }
+
 #menuBtn {
   display: none;
   font-size: 2rem;

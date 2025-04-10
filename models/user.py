@@ -4,14 +4,14 @@ from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt()
 
 class User:
-    def __init__(self, db, first_name, last_name, email, phone, password, orders=[]):
+    def __init__(self, db, first_name, last_name, email, phone, password:str, orders=[]):
         self.db = db
         self.collection = db.users
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
         self.phone = phone
-        self.password = bcrypt.generate_password_hash(password)
+        self.password = bcrypt.generate_password_hash(password, 10).decode('utf-8')
         self.orders = orders
 
     def save(self):

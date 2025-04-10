@@ -13,19 +13,14 @@ User = client.backend.users
 def authorized(f):
     @wraps(f)
     def decorated(*args, **kwargs):
-        try:
-            token = request.headers.get("Authorization")
-            if token and token.startswith("Bearer"):
-                token = token.split(" ")[1]
-            else:
-                token = session.get("token")
-            if not token:
-                raise Unauthorized("Token is missing or invalid")
-            
+        try:            
             verify_jwt_in_request()
-            decoded = get_jwt_identity()
-            user = User.find_one({"email": decoded["email"]}, {"_id": 1, "email": 1, "phone": 1})
 
+            email = get_jwt_identity()
+            if not email:
+                raise Unauthorized("Invalid token")
+            
+            user = User.find_one({"email": email}, {"_id": 1, "email": 1, "phone": 1})
             if not user:
                 raise Unauthorized("User not found ")
             g.user = user

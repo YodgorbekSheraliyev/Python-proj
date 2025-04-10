@@ -5,11 +5,15 @@
         <form class="signup_form" action="/auth/login" method="POST", novalidate>
             <h2>Login</h2>
             <div class="form-group">
-                {%if errors%}
-                    {% for error in errors %}
-                        <h3 style="text-align: center; color: red"> {{error}}</h3>
-                    {% endfor %}
-                {% endif %}
+                {% with messages = get_flashed_messages(with_categories=True) %}
+                    {% if messages %}
+                        <ul>
+                            {% for category, message in messages %}
+                                <li class="{{ category }}" style="text-align: center; background-color: red">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="example@mail.com" name="email" required>
             </div>
